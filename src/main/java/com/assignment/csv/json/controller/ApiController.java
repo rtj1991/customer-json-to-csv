@@ -35,9 +35,9 @@ public class ApiController {
 	 * @param name
 	 * @return
 	 */
-	@RequestMapping(value = "/customers", method = RequestMethod.GET,
+	@RequestMapping(value = "/customers/name/{name}", method = RequestMethod.GET,
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<Customers>> getCustomersByName(@RequestParam("name") String name) {
+	public ResponseEntity<List<Customers>> getCustomersByName(@PathVariable("name") String name) {
 		List<Customers> customer = commonService.findAllByName(name);
 		return new ResponseEntity(customer, HttpStatus.OK);
 	}
