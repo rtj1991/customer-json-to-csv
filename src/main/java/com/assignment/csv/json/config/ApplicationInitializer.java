@@ -26,7 +26,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
     @Autowired
     private Environment environment;
 
-    public static final String baseUrl= "/media/thara/tharaka/study/fidenz/customer-service-master/src/main/resources/";
+    public static final String baseUrl= "/media/thara/tharaka/study/fidenz/customer-json-to-csv-main/src/main/resources/";
     @Override
     public void onStartup(ServletContext container) {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
